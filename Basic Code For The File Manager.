@@ -39,7 +39,7 @@ public class tushar {
 			case 1:
 				rec1();
 				break;
-				case 2:
+			case 2:
 				rec2();
 				break;
 			case 3:
@@ -57,8 +57,8 @@ public class tushar {
 			System.out.println( " 1. Record - K.C.");	
 			System.out.println( " 2. Record - S.C.");
 			System.out.println( " 3. Record - T.C.");
-			Scanner input2 = new Scanner (System.in);
-			int option2 = input2.nextInt();
+		Scanner input2 = new Scanner (System.in);
+		int option2 = input2.nextInt();
 			switch (option2){
 			case 1:
 				System.out.println("Opening Record-K.C. ....");
@@ -74,7 +74,7 @@ public class tushar {
 				case 2 :
 					delrec();
 					break;
-					default :
+				default :
 						System.out.println("Invalid Input.");
 				}
 				break;
@@ -92,7 +92,7 @@ public class tushar {
 				case 2 :
 					delrec();
 					break;
-					default :
+				default :
 						System.out.println("Invalid Input.");
 				}
 				break;
