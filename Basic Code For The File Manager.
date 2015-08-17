@@ -14,7 +14,7 @@ public class tushar {
 			System.out.println("Enter Password : ");
 			Scanner input2 = new Scanner (System.in);
 			String pass1 = input2.nextLine();
-			if (pass.equals("tushar")){
+			if (pass.equals("password")){
 				System.out.println("1. Search Records");
 				System.out.println("2. Edit Records ");
 				System.out.println("3. Quit ");
