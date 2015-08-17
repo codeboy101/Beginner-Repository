@@ -4,8 +4,8 @@ public class tushar {
 	public static void show(){
 		Scanner input1 = new Scanner(System.in);
 		String pass = input1.nextLine();
-		if (pass.equals("password")){
-			System.out.println("1. Search Records");
+		if (pass.equals("tushar")){
+			System.out.println("1. View Records");
 			System.out.println("2. Edit Records ");
 			System.out.println("3. Quit ");
 		}
@@ -15,7 +15,7 @@ public class tushar {
 			Scanner input2 = new Scanner (System.in);
 			String pass1 = input2.nextLine();
 			if (pass.equals("tushar")){
-				System.out.println("1. Search Records");
+				System.out.println("1. View Records");
 				System.out.println("2. Edit Records ");
 				System.out.println("3. Quit ");
 			}
@@ -57,8 +57,8 @@ public class tushar {
 			System.out.println( " 1. Record - K.C.");	
 			System.out.println( " 2. Record - S.C.");
 			System.out.println( " 3. Record - T.C.");
-		Scanner input2 = new Scanner (System.in);
-		int option2 = input2.nextInt();
+			Scanner input2 = new Scanner (System.in);
+			int option2 = input2.nextInt();
 			switch (option2){
 			case 1:
 				System.out.println("Opening Record-K.C. ....");
@@ -70,11 +70,17 @@ public class tushar {
 				switch(num){
 				case 1 :
 					System.out.println("Record Held Copied.");
+					System.out.println("Do You Want To Paste it To My Records ? ");
+					Scanner feedback = new Scanner (System.in);
+					String textans = feedback.nextLine();
+					if (textans.equals("yes")){
+						myrecnew();
+					}
 					break;
 				case 2 :
 					delrec();
 					break;
-				default :
+					default :
 						System.out.println("Invalid Input.");
 				}
 				break;
@@ -88,11 +94,17 @@ public class tushar {
 				switch(num1){
 				case 1 :
 					System.out.println("Record Held Copied.");
+					System.out.println("Do You Want To Paste it To My Records ? ");
+					Scanner feedback = new Scanner (System.in);
+					String textans = feedback.nextLine();
+					if (textans.equals("yes")){
+						myrecnew2();
+					}
 					break;
 				case 2 :
 					delrec();
 					break;
-				default :
+					default :
 						System.out.println("Invalid Input.");
 				}
 				break;
@@ -106,6 +118,12 @@ public class tushar {
 				switch(num2){
 				case 1 :
 					System.out.println("Record Held Copied.");
+					System.out.println("Do You Want To Paste it To My Records ? ");
+					Scanner feedback = new Scanner (System.in);
+					String textans = feedback.nextLine();
+					if (textans.equals("yes")){
+						myrecnew3();
+					}
 					break;
 				case 2 :
 					delrec();
@@ -163,6 +181,82 @@ public class tushar {
 		
 	}
 	
+	public static void myrecold(){
+		System.out.println( "My Records / 1. View All Records ");
+		System.out.println(" 2. Quit My Records ");
+		Scanner rec = new Scanner (System.in);
+		int view = rec.nextInt();
+		switch(view){
+		case 1 :
+			System.out.println("Empty Folder");
+			break;
+		case 2 :
+			System.out.println("Quitting My Records");
+			break;
+		default :
+		System.out.println("Invalid Input");		
+		}
+	}
+	public static void myrecnew(){
+		System.out.println("Updated My Records.");
+		System.out.println("1.Record K.C.");
+		System.out.println("Enter Record Number To View");
+		Scanner token = new Scanner(System.in);
+		int answer = token.nextInt();
+		switch (answer){
+		case 1 :
+			System.out.println("Name : Person");
+			System.out.println("Age : 14");
+			System.out.println("Occupation : Student");
+			System.out.println("Nation : Country");
+			System.out.println("State : State");
+			System.out.println("City : City");
+			break;
+		default :
+			System.out.println("Invalid Input");
+			break ;
+		}
+	}
+	public static void myrecnew2(){
+		System.out.println("Updated My Records.");
+		System.out.println("1.Record S.C.");
+		System.out.println("Enter Record Number To View");
+		Scanner token = new Scanner(System.in);
+		int answer = token.nextInt();
+		switch (answer){
+		case 1 :
+			System.out.println("Name : Person");
+			System.out.println("Age : 35");
+			System.out.println("Occupation : Businessman");
+			System.out.println("Nation : Country");
+			System.out.println("State : State");
+			System.out.println("City : City");
+			break;
+		default :
+			System.out.println("Invalid Input");
+			break ;
+		}
+	}
+	public static void myrecnew3(){
+		System.out.println("Updated My Records.");
+		System.out.println("1.Record T.C.");
+		System.out.println("Enter Record Number To View");
+		Scanner token = new Scanner(System.in);
+		int answer = token.nextInt();
+		switch (answer){
+		case 1 :
+			System.out.println("Name : Person");
+ 			System.out.println("Age : 18");
+			System.out.println("Occupation : Student");
+			System.out.println("Nation : Country");
+			System.out.println("State : State");
+			System.out.println("City : City");
+			break;
+		default :
+			System.out.println("Invalid Input");
+			break ;
+		}
+	}
 	
 	public static void main(String[] args) {
 		System.out.println(" ******* ENTER PASSWORD *******");
@@ -170,5 +264,4 @@ public class tushar {
 		take();
 	}
 }
-
 
