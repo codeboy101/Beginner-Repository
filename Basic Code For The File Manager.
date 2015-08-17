@@ -80,9 +80,39 @@ public class tushar {
 				break;
 			case 2 :
 				System.out.println("Opening Record-S.C. ....");
+				System.out.println("1. Copy Record");
+				System.out.println("2. Delete Record");
+				System.out.println("Choose an option.");
+				Scanner input4 = new Scanner (System.in);
+				int num1 = input4.nextInt();
+				switch(num1){
+				case 1 :
+					System.out.println("Record Held Copied.");
+					break;
+				case 2 :
+					delrec();
+					break;
+					default :
+						System.out.println("Invalid Input.");
+				}
 				break;
 			case 3 :
 				System.out.println("Opening Record-T.C .....");
+				System.out.println("1. Copy Record");
+				System.out.println("2. Delete Record");
+				System.out.println("Choose an option.");
+				Scanner input5 = new Scanner (System.in);
+				int num2 = input5.nextInt();
+				switch(num2){
+				case 1 :
+					System.out.println("Record Held Copied.");
+					break;
+				case 2 :
+					delrec();
+					break;
+					default :
+						System.out.println("Invalid Input.");
+				}
 				break;
 				default:
 					System.out.println( "Invalid Input");
@@ -140,7 +170,5 @@ public class tushar {
 		take();
 	}
 }
-
-
 
 
