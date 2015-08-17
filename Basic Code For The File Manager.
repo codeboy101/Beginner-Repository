@@ -1,0 +1,143 @@
+import java.util.Scanner;
+
+public class tushar {
+	public static void show(){
+		Scanner input1 = new Scanner(System.in);
+		String pass = input1.nextLine();
+		if (pass.equals("password")){
+			System.out.println("1. Search Records");
+			System.out.println("2. Edit Records ");
+			System.out.println("3. Quit ");
+		}
+		else {
+			System.out.println(" Invalid Input . You Have 1 Try Remaining .");
+			System.out.println("Enter Password : ");
+			Scanner input2 = new Scanner (System.in);
+			String pass1 = input2.nextLine();
+			if (pass.equals("tushar")){
+				System.out.println("1. Search Records");
+				System.out.println("2. Edit Records ");
+				System.out.println("3. Quit ");
+			}
+			else {
+				System.out.println( "Invalid Input . You Have 0 Tries Remaining. \nProgram Terminated.");
+			}
+		}
+	}
+	
+	public static void take(){
+		Scanner input = new Scanner (System.in);
+		int option = input.nextInt();
+		if(option == 1){
+		System.out.println( " 1. Record - K.C.");	
+		System.out.println( " 2. Record - S.C.");
+		System.out.println( " 3. Record - T.C. ");
+		System.out.println("Select The Record You Want To View.");
+		Scanner answer = new Scanner (System.in);
+		int take1 = answer.nextInt();
+			switch (take1) {
+			case 1:
+				rec1();
+				break;
+				case 2:
+				rec2();
+				break;
+			case 3:
+				rec3();
+				break;
+			default:
+				System.out.println(" Invalid Input. Program Terminating .");
+				break;
+			}
+
+		}
+		else if (option == 2){
+			System.out.println( " Opening Editor.....");
+			System.out.println("Select The File You Want To Edit.");
+			System.out.println( " 1. Record - K.C.");	
+			System.out.println( " 2. Record - S.C.");
+			System.out.println( " 3. Record - T.C.");
+			Scanner input2 = new Scanner (System.in);
+			int option2 = input2.nextInt();
+			switch (option2){
+			case 1:
+				System.out.println("Opening Record-UV001....");
+				System.out.println("1. Copy Record");
+				System.out.println("2. Delete Record");
+				System.out.println("Choose an option.");
+				Scanner input3 = new Scanner (System.in);
+				int num = input3.nextInt();
+				switch(num){
+				case 1 :
+					System.out.println("Record Held Copied.");
+					break;
+				case 2 :
+					delrec();
+					break;
+					default :
+						System.out.println("Invalid Input.");
+				}
+				break;
+			case 2 :
+				System.out.println("Opening Record-S.C. ....");
+				break;
+			case 3 :
+				System.out.println("Opening Record-T.C .....");
+				break;
+				default:
+					System.out.println( "Invalid Input");
+			
+			
+			}
+		}
+	
+		else if (option == 3){
+			System.out.println("Program Terminated ");
+		}
+		else {
+			System.out.println("Invalid Input . Program Closing ..... ");
+		}
+	}
+	public static void delrec(){
+		System.out.println("Deleting Record.. \n Record Deleted.");
+		System.out.println("**New Database**");
+		System.out.println( " 1. Record - S.C. ");
+		System.out.println( " 2. Record - T.C. ");
+		
+		}
+	public static void rec1(){
+		System.out.println("Name : Person");
+		System.out.println("Age : 14");
+		System.out.println("Occupation : Student");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		
+	}
+	public static void rec2(){
+		System.out.println("Name : Person");
+		System.out.println("Age : 35");
+		System.out.println("Occupation : Businessman");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		
+	}
+	public static void rec3(){
+		System.out.println("Name : Person");
+		System.out.println("Age : 18");
+		System.out.println("Occupation : Student");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println(" ******* ENTER PASSWORD *******");
+		show();
+		take();
+	}
+}
+
