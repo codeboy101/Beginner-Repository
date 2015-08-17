@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 public class tushar {
 	public static void show(){
+		System.out.println("Welcome.Enter Password To Login.");
 		Scanner input1 = new Scanner(System.in);
 		String pass = input1.nextLine();
 		if (pass.equals("tushar")){
 			System.out.println("1. View Records");
 			System.out.println("2. Edit Records ");
-			System.out.println("3. Quit ");
+			System.out.println("3. View My Records ");
+            System.out.println("4. Quit ");		
 		}
 		else {
 			System.out.println(" Invalid Input . You Have 1 Try Remaining .");
@@ -17,7 +19,8 @@ public class tushar {
 			if (pass.equals("tushar")){
 				System.out.println("1. View Records");
 				System.out.println("2. Edit Records ");
-				System.out.println("3. Quit ");
+				System.out.println("3. View My Records ");
+				System.out.println("4. Quit ");
 			}
 			else {
 				System.out.println( "Invalid Input . You Have 0 Tries Remaining. \nProgram Terminated.");
@@ -68,7 +71,7 @@ public class tushar {
 				Scanner input3 = new Scanner (System.in);
 				int num = input3.nextInt();
 				switch(num){
-			case 1 :
+				case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -77,10 +80,10 @@ public class tushar {
 						myrecnew();
 					}
 					break;
-			case 2 :
+				case 2 :
 					delrec();
 					break;
-			default :
+					default :
 						System.out.println("Invalid Input.");
 				}
 				break;
@@ -92,7 +95,7 @@ public class tushar {
 				Scanner input4 = new Scanner (System.in);
 				int num1 = input4.nextInt();
 				switch(num1){
-			case 1 :
+				case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -101,13 +104,13 @@ public class tushar {
 						myrecnew2();
 					}
 					break;
-			case 2 :
+				case 2 :
 					delrec();
 					break;
-			default :
+					default :
 						System.out.println("Invalid Input.");
 				}
-			         	break;
+				break;
 			case 3 :
 				System.out.println("Opening Record-T.C .....");
 				System.out.println("1. Copy Record");
@@ -116,7 +119,7 @@ public class tushar {
 				Scanner input5 = new Scanner (System.in);
 				int num2 = input5.nextInt();
 				switch(num2){
-			case 1 :
+				case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -125,14 +128,14 @@ public class tushar {
 						myrecnew3();
 					}
 					break;
-			case 2 :
+				case 2 :
 					delrec();
 					break;
-			default :
+					default :
 						System.out.println("Invalid Input.");
 				}
 				break;
-			default:
+				default:
 					System.out.println( "Invalid Input");
 			
 			
@@ -140,10 +143,13 @@ public class tushar {
 		}
 	
 		else if (option == 3){
-			System.out.println("Program Terminated ");
+			myrecold();
 		}
+		else if(option == 4) {
+			System.out.println("Program Terminated. ");
+			}
 		else {
-			System.out.println("Invalid Input . Program Closing ..... ");
+			System.out.println("Invalid Input.");
 		}
 	}
 	public static void delrec(){
@@ -188,7 +194,21 @@ public class tushar {
 		int view = rec.nextInt();
 		switch(view){
 		case 1 :
-			System.out.println("Empty Folder");
+			System.out.println("No Records To View");
+			System.out.println("Go Back To Main Menu ? ");
+			Scanner ask = new Scanner (System.in);
+			String ans = ask.nextLine();
+			if (ans.equals("yes")){
+				show();
+			}
+			else if (ans.equals("no")){
+			System.out.println("Program Terminated");	
+			}
+			else {
+				do{
+					System.out.println("Invalid Input.Program Terminated");
+				}while(!ans.equals("yes") && !ans.equals("no"));
+			}
 			break;
 		case 2 :
 			System.out.println("Quitting My Records");
@@ -205,13 +225,13 @@ public class tushar {
 		int answer = token.nextInt();
 		switch (answer){
 		case 1 :
-			System.out.println("Name : Person");
-			System.out.println("Age : 14");
-			System.out.println("Occupation : Student");
-			System.out.println("Nation : Country");
-			System.out.println("State : State");
-			System.out.println("City : City");
-			break;
+		System.out.println("Name : Person");
+		System.out.println("Age : 14");
+		System.out.println("Occupation : Student");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		break;
 		default :
 			System.out.println("Invalid Input");
 			break ;
@@ -225,13 +245,13 @@ public class tushar {
 		int answer = token.nextInt();
 		switch (answer){
 		case 1 :
-			System.out.println("Name : Person");
-			System.out.println("Age : 35");
-			System.out.println("Occupation : Businessman");
-			System.out.println("Nation : Country");
-			System.out.println("State : State");
-			System.out.println("City : City");
-			break;
+		System.out.println("Name : Person");
+		System.out.println("Age : 35");
+		System.out.println("Occupation : Businessman");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		break;
 		default :
 			System.out.println("Invalid Input");
 			break ;
@@ -245,13 +265,13 @@ public class tushar {
 		int answer = token.nextInt();
 		switch (answer){
 		case 1 :
-			System.out.println("Name : Person");
- 			System.out.println("Age : 18");
-			System.out.println("Occupation : Student");
-			System.out.println("Nation : Country");
-			System.out.println("State : State");
-			System.out.println("City : City");
-			break;
+		System.out.println("Name : Person");
+		System.out.println("Age : 18");
+		System.out.println("Occupation : Student");
+		System.out.println("Nation : Country");
+		System.out.println("State : State");
+		System.out.println("City : City");
+		break;
 		default :
 			System.out.println("Invalid Input");
 			break ;
@@ -259,9 +279,7 @@ public class tushar {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(" ******* ENTER PASSWORD *******");
 		show();
 		take();
 	}
 }
-
