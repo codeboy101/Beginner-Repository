@@ -68,7 +68,7 @@ public class tushar {
 				Scanner input3 = new Scanner (System.in);
 				int num = input3.nextInt();
 				switch(num){
-				case 1 :
+			case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -77,10 +77,10 @@ public class tushar {
 						myrecnew();
 					}
 					break;
-				case 2 :
+			case 2 :
 					delrec();
 					break;
-					default :
+			default :
 						System.out.println("Invalid Input.");
 				}
 				break;
@@ -92,7 +92,7 @@ public class tushar {
 				Scanner input4 = new Scanner (System.in);
 				int num1 = input4.nextInt();
 				switch(num1){
-				case 1 :
+			case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -101,13 +101,13 @@ public class tushar {
 						myrecnew2();
 					}
 					break;
-				case 2 :
+			case 2 :
 					delrec();
 					break;
-					default :
+			default :
 						System.out.println("Invalid Input.");
 				}
-				break;
+			         	break;
 			case 3 :
 				System.out.println("Opening Record-T.C .....");
 				System.out.println("1. Copy Record");
@@ -116,7 +116,7 @@ public class tushar {
 				Scanner input5 = new Scanner (System.in);
 				int num2 = input5.nextInt();
 				switch(num2){
-				case 1 :
+			case 1 :
 					System.out.println("Record Held Copied.");
 					System.out.println("Do You Want To Paste it To My Records ? ");
 					Scanner feedback = new Scanner (System.in);
@@ -125,14 +125,14 @@ public class tushar {
 						myrecnew3();
 					}
 					break;
-				case 2 :
+			case 2 :
 					delrec();
 					break;
-					default :
+			default :
 						System.out.println("Invalid Input.");
 				}
 				break;
-				default:
+			default:
 					System.out.println( "Invalid Input");
 			
 			
